@@ -10,10 +10,11 @@ import numpy as np
 import tensorflow as tf
 import get_black_cat
 
-reload_model = tf.keras.models.load_model('./model-2020-07-19-train_org.h5')
+reload_model = tf.keras.models.load_model('D:\\codes\\model-2020-07-19-train_org.h5')
 reload_model.summary()
 path = 'D:\\kaggle13\\test_org\\cat\\cat.1.jpg'
-path_black_cat = get_black_cat.path_black_cat
+#path_black_cat = get_black_cat.path_black_cat
+path_black_cat = 'D:\\kaggle13\\cat'
 
 def one_image_array(path):
 	image = tf.keras.preprocessing.image.load_img(path, target_size=(256,256))
